@@ -34,17 +34,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build Ahokore
-        run: west build -s zmk/app -b ahokore -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Ahokore DTS File
+      - name: West Build ChocTKL
+        run: west build -s zmk/app -b choctkl -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: ChocTKL DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/ahokore.dts.pre.tmp
+        run: cat -n build/zephyr/choctkl.dts.pre.tmp
       - name: Ahokore Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 ahokore.uf2
-      - name: Archive (Ahokore)
+        run: cp build/zephyr/zmk.uf2 choctkl.uf2
+      - name: Archive (ChocTKL)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: ahokore.uf2
+          path: choctkl.uf2
