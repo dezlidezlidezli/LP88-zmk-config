@@ -22,7 +22,7 @@
                         &kp LCTRL &kp LGUI &kp LALT                 &kp SPACE        &kp RALT  &mo 1   &kp LGUI &kp RCTRL                    &kp LEFT  &kp DOWN &kp RIGHT
                         >;
                 };
-                function_layer {8
+                function_layer {
                         bindings = <
                         &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
                         &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none
