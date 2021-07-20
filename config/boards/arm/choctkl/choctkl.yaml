@@ -1,5 +1,5 @@
-identifier: ahokore
-name: ahokore_v2
+identifier: choctkl
+name: choctkl
 type: mcu
 arch: arm
 toolchain:
