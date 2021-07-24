@@ -42,9 +42,9 @@ jobs:
       - name: Ahokore Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.hex choctkl.hex
+        run: cp build/zephyr/zmk.hex choctkl.uf2
       - name: Archive (ChocTKL)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: choctkl.hex
+          path: choctkl.uf2
